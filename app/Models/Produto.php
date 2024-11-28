@@ -11,13 +11,11 @@ class Produto extends Model
 
     protected $table = 'produtos';
 
-    public function user()
-    {
+    public function user(){
         return $this->belongsTo(User::class, 'id_user');
     }
 
-    public function categoria()
-    {
+    public function categoria(){
         return $this->belongsTo(Categoria::class, 'id_categoria');
     }
 }

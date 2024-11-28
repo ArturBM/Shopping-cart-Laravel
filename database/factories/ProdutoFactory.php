@@ -2,9 +2,9 @@
 
 namespace Database\Factories;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\Categoria;
 use App\Models\User;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
 /**
@@ -19,16 +19,15 @@ class ProdutoFactory extends Factory
      */
     public function definition(): array
     {
-        $nome = $this->faker->unique()->sentence();
+        $nome = fake()->unique()->name();
         return [
             'nome' => $nome,
-            'descricao' => $this->faker->paragraph(),
-            'preco' => $this->faker->randomNumber(2),
+            'descricao' => fake()->paragraph(),
+            'preco' => fake()->randomNumber(2),
             'slug' => Str::slug($nome),
-            'imagem' => $this->faker->imageUrl(400,400),
+            'imagem' => fake()->imageUrl(400, 400),
             'id_user' => User::pluck('id')->random(),
-            'id_categoria' => Categoria::pluck('id')->random(),
-
+            'id_categoria' => Categoria::pluck('id')->random()
         ];
     }
 }
