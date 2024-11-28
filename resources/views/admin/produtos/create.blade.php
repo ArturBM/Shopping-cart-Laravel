@@ -1,7 +1,7 @@
 <div id="create" class="modal">
     <div class="modal-content">
         <h4><i class="material-icons">card_giftcard</i> Novo produto</h4>
-        <form action="" method="POST" enctype="multipart/form-data" class="col s12">
+        <form action="{{route('admin.produto.create')}}" method="POST" enctype="multipart/form-data" class="col s12">
             <div class="row">
                 <div class="input-field col s6">
                     <input id="nome" type="text" class="validate">
