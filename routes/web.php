@@ -30,3 +30,4 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('login.logout');
 Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard')->middleware('auth');
 Route::get('/admin/produtos', [ProdutoController::class, 'index'])->name('admin.produtos');
 Route::delete('/admin/produto/delete/{id}', [ProdutoController::class, 'destroy'])->name('admin.delete');
+Route::post('/admin/produto/store', [ProdutoController::class, 'store'])->name('admin.produto.store');

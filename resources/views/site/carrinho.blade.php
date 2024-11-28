@@ -70,7 +70,7 @@
         </table>
         <div class="card orange">
             <div class="card-content white-text">
-                <span class="card-title" style="font-weight: 600">TOTAL: R${{ number_format( Cart::subtotal(), 2, ',', '.' ) }}</span>
+                <span class="card-title" style="font-weight: 600">TOTAL: R${{ number_format( (float)Cart::subtotal(), 2, ',', '.' ) }}</span>
                 <p>Pague em 12x sem juros!</p>
             </div>
         </div>
